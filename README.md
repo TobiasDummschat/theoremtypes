@@ -9,6 +9,7 @@ A small LaTeX package for improved theorem environments.
 - `\begin{refname*} ... \end{refname*}` for the environment with numbering.
 - An optional argument `\begin{refname}[Optional]` which will appear in parantheses after the number.
 ## Example
+![screenshot of the output of /example/example.tex](example/example.png)
 ```latex
 \documentclass{article}
 \usepackage{theoremtypes}
