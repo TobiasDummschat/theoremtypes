@@ -1,0 +1,32 @@
+\ProvidesPackage{theoremtypes}
+\RequirePackage{amsthm}
+\RequirePackage{thmtools}
+\RequirePackage{xparse}
+\RequirePackage{hyperref}
+
+\newcommand{\NewTheoremType}[2]{%
+    \newtheorem*{#1*}{#2}%
+    \newtheorem{#1**}[theoremCounter]{#2}%
+    \NewDocumentEnvironment{#1}{o}%
+        {\IfValueTF{##1}
+            {\begin{#1**}[##1]}% if argument is present
+            {\begin{#1**}}% else
+        \label{\thetheoremCounter}}%
+        {\end{#1**}}%
+}
+
+\newtheorem{theoremCounter}%
+{This is just a counter, which should not appear in the document}%
+% change this to "chapter", "section", or similar depending on the desired enumeration
+[section]
+
+%Syntax: \NewTheoremType{Environment Name}{Header of Environment}
+
+\NewTheoremType{corollary}{Corollary}
+\NewTheoremType{lemma}{Lemma}
+\NewTheoremType{proposition}{Proposition}
+\NewTheoremType{remark}{Remark}
+\NewTheoremType{theorem}{Theorem}
+
+\theoremstyle{definition}
+\NewTheoremType{definition}{Definition}
