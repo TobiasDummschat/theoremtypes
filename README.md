@@ -1,5 +1,5 @@
 # theoremtypes.sty
-A small LaTeX package for improved theorem environments.
+A small LaTeX package improving upon the theorem environments of the package [`amsthm`](https://www.ctan.org/pkg/amsthm).
 ## Features
 - Provides theorem environments referencable by number to use in lecture notes
 - Provides a single command for defining multiple variations of the same theorem environment at once
